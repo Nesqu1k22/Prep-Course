@@ -208,21 +208,35 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
-  let meses = ["Enero","Marzo","Noviembre"];
+   var meses = [];
+
   let requisitos = 0;
+
   for (i=0; i < array.length; i++){
-    if (meses[i] == "Enero"){
+    if (array[i] == "Enero"){
+
+      meses.push("Enero");
+
+      requisitos++;
+
+  }
+  if (array[i] == "Marzo"){
+
+    meses.push("Marzo");
+
     requisitos++;
   }
-  if (meses[i] == "Marzo"){
-    requisitos++;
+  if (array[i] == "Noviembre"){
+
+    meses.push("Noviembre");
+
+      requisitos++;
   }
-  if (meses[i] == "Noviembre"){
-    requisitos++;
   }
-  }
-  if (requisitos === 3) {
+  if (3 == requisitos ) {
+
       return meses;
+      
     }
     else {
       return "No se encontraron los meses pedidos";
@@ -234,7 +248,19 @@ function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
+  var mayores = [];
+  
 
+  for (i=0; i < array.length; i++){
+
+    var a = array[i] 
+
+    if (a > 100){
+
+      mayores.push(array[i]);
+  }
+return mayores;
+}
 }
 
 
@@ -274,12 +300,12 @@ function continueStatement(numero) {
   // Tu código:
   array = [];
   for (i = 0; i < 10; i++) {
-     numero += 2;
+
     if (i === 5){
       continue;
     }
     else{
-      array.push(numero)
+      array.push(numero += 2)
       
     }
   }
