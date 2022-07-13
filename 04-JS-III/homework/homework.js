@@ -249,18 +249,18 @@ function mayorACien(array) {
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
   var mayores = [];
-  
 
   for (i=0; i < array.length; i++){
 
-    var a = array[i] 
-
-    if (a > 100){
-
+    if (array[i] < 101){
+     
+     
+    }
+    else {
       mayores.push(array[i]);
+    }
   }
-return mayores;
-}
+  return mayores;
 }
 
 
